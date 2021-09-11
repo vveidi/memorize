@@ -39,7 +39,7 @@ struct CardView: View {
                     .font(Font.system(size: DrawingConstants.fontSize))
                     .scaleEffect(scale(thatFits: geometry.size))
             }
-            .cardify(isFaceUp: card.isFaceUp, color1: game.theme.color, color2: game.theme.accentColor)
+            .cardify(isFaceUp: card.isFaceUp, color: game.theme.color)
         }
     }
     
@@ -54,11 +54,13 @@ struct CardView: View {
     }
 }
 
+// MARK: - Previews
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         let card = EmojiMemoryGame.Card(isFaceUp: true, isMatched: false, isSeen: false, content: "🐯", id: 1)
-        let game = EmojiMemoryGame()
+        let theme = ThemeStore(named: "Preview").theme(at: 0)
+        let game = EmojiMemoryGame(theme: theme)
         
         CardView(card: card, game: game)
             .frame(width: 300)

@@ -10,11 +10,14 @@ import SwiftUI
 struct EmojiMemoryGameView: View {
     
     typealias Card = EmojiMemoryGame.Card
-    @ObservedObject var game: EmojiMemoryGame
     @Namespace private var dealingNamespace
+    @ObservedObject var game: EmojiMemoryGame
+    
+    init(theme: Theme) {
+        game = EmojiMemoryGame(theme: theme)
+    }
     
     var body: some View {
-        NavigationView {
             ZStack(alignment: .bottom) {
                 VStack {
                     gameBody
@@ -30,14 +33,14 @@ struct EmojiMemoryGameView: View {
                     score
                 }
             }
+            .navigationTitle("\(game.theme.title)")
             .padding()
-            .navigationBarTitle(game.theme.title)
-        }
     }
     
     var score: some View {
-        Text("\(game.score)")
+        Text("Score: \(game.score)")
             .font(.title3)
+            .padding(.top)
     }
     
     @State private var dealt = Set<Int>()
@@ -64,13 +67,13 @@ struct EmojiMemoryGameView: View {
     }
     
     var gameBody: some View {
-        AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
+        AspectVGrid(items: game.cards, aspectRatio: CardConstants.aspectRatio) { card in
             if isUndealt(card) || (card.isMatched && !card.isFaceUp) {
                 Color.clear
             } else {
                 CardView(card: card, game: game)
                     .matchedGeometryEffect(id: card.id, in: dealingNamespace)
-                    .padding(4)
+                    .padding(CardConstants.cardPadding)
                     .transition(AnyTransition.asymmetric(insertion: .identity, removal: .scale))
                     .zIndex(zIndex(of: card))
                     .onTapGesture {
@@ -119,6 +122,7 @@ struct EmojiMemoryGameView: View {
     }
     
     private struct CardConstants {
+        static let cardPadding: CGFloat = 4
         static let aspectRatio: CGFloat = 2/3
         static let dealDuration: Double = 0.5
         static let totalDealDuration: Double = 2
@@ -128,17 +132,17 @@ struct EmojiMemoryGameView: View {
     
 }
 
-
+// MARK: - Previews
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let game = EmojiMemoryGame()
-        EmojiMemoryGameView(game: game)
-        EmojiMemoryGameView(game: game)
+        let theme = ThemeStore(named: "Preview").theme(at: 0)
+        EmojiMemoryGameView(theme: theme)
+        EmojiMemoryGameView(theme: theme)
             .previewLayout(.fixed(width: 568, height: 320))
-        EmojiMemoryGameView(game: game)
+        EmojiMemoryGameView(theme: theme)
             .preferredColorScheme(.dark)
-        EmojiMemoryGameView(game: game)
+        EmojiMemoryGameView(theme: theme)
             .preferredColorScheme(.dark)
             .previewLayout(.fixed(width: 568, height: 320))
     }

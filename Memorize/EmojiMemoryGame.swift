@@ -11,16 +11,16 @@ class EmojiMemoryGame: ObservableObject {
     typealias Card = MemoryGame<String>.Card
     
     @Published private var model: MemoryGame<String>
-    private(set) var theme: Theme
+    @Published var theme: Theme
     
     private static func createMemoryGame(theme: Theme) -> MemoryGame<String> {
-        MemoryGame<String>(numberOfPairsOfCards: theme.numberOfPairsOfCards!) { pairIndex in
+        MemoryGame<String>(numberOfPairsOfCards: theme.numberOfPairsOfCards) { pairIndex in
             theme.emojis[pairIndex]
         }
     }
     
-    init() {
-        theme = themes.randomElement()!
+    init(theme: Theme) {
+        self.theme = theme
         model = EmojiMemoryGame.createMemoryGame(theme: theme)
     }
     
@@ -34,7 +34,7 @@ class EmojiMemoryGame: ObservableObject {
         model.score
     }
     
-    // MARK: - Intent
+    // MARK: - Intents
     
     func choose (_ card: Card) {
         model.choose(card)
@@ -45,7 +45,6 @@ class EmojiMemoryGame: ObservableObject {
     }
     
     func restart() {
-        theme = themes.randomElement()!
         model = EmojiMemoryGame.createMemoryGame(theme: theme)
     }
 }
