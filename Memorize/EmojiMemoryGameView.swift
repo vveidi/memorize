@@ -123,6 +123,7 @@ struct EmojiMemoryGameView: View {
     var restart: some View {
         Button("Restart") {
             withAnimation {
+                dealt = []
                 game.restart()
             }
         }
@@ -141,6 +142,7 @@ struct EmojiMemoryGameView: View {
                   ),
                   primaryButton: .default(Text("Restart")) {
                     withAnimation {
+                        dealt = []
                         game.restart()
                     }
                   },
