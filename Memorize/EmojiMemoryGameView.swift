@@ -33,14 +33,16 @@ struct EmojiMemoryGameView: View {
                     score
                 }
             }
+            .onChange(of: game.cards) { cards in
+                if cards.filter({ $0.isMatched }).count == cards.count {
+                    gameFinishedAlert()
+                }
+            }
+            .alert(item: $alertToShow) { alertToShow in
+                alertToShow.alert()
+            }
             .navigationTitle("\(game.theme.title)")
             .padding()
-    }
-    
-    var score: some View {
-        Text("Score: \(game.score)")
-            .font(.title3)
-            .padding(.top)
     }
     
     @State private var dealt = Set<Int>()
@@ -112,12 +114,38 @@ struct EmojiMemoryGameView: View {
         }
     }
     
+    var score: some View {
+        Text("Score: \(game.score)")
+            .font(.title3)
+            .padding(.top)
+    }
+    
     var restart: some View {
         Button("Restart") {
             withAnimation {
-                dealt = []
                 game.restart()
             }
+        }
+    }
+    
+    @State private var alertToShow: IdentifiableAlert?
+    
+    func gameFinishedAlert() {
+        alertToShow = IdentifiableAlert(id: "Game Has Finished") {
+            Alert(title: Text("Congratulations!"),
+                  message: Text(
+                    """
+                    You memorized all the cards.
+                    Your final score is \(game.score)
+                    """
+                  ),
+                  primaryButton: .default(Text("Restart")) {
+                    withAnimation {
+                        game.restart()
+                    }
+                  },
+                  secondaryButton: .cancel()
+            )
         }
     }
     

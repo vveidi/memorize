@@ -62,7 +62,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         cards.shuffle()
     }
     
-    struct Card: Identifiable {
+    struct Card: Identifiable, Equatable {
         var isFaceUp = false {
             didSet {
                 if isFaceUp {

@@ -46,3 +46,8 @@ extension RangeReplaceableCollection where Element: Identifiable {
         }
     }
 }
+
+struct IdentifiableAlert: Identifiable {
+    var id: String
+    var alert: () -> Alert
+}
