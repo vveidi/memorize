@@ -49,10 +49,8 @@ struct ThemeChooser: View {
             }
             .environment(\.editMode, $editMode)
             .onAppear {
-                if games.isEmpty {
-                    store.themes.forEach { theme in
-                        games[theme.id] = EmojiMemoryGame(theme: theme)
-                    }
+                store.themes.forEach { theme in
+                    games[theme.id] = EmojiMemoryGame(theme: theme)
                 }
             }
         }

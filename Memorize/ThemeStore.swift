@@ -40,17 +40,16 @@ class ThemeStore: ObservableObject {
     }
     
     private func templateThemes() {
-        insertTheme(titled: "Halloween", emojis: ["👻", "🎃", "🕷️"], color: .orange)
+        insertTheme(titled: "Halloween", emojis: ["👻", "🎃", "🕷️", "🍬", "💀"], color: .orange)
         insertTheme(titled: "Christmas", emojis: ["🎅", "⛪", "🌟", "❄️", "⛄", "🎄", "🎁", "🧦"], color: .blue)
         insertTheme(titled: "Transport", emojis: ["🚗", "🚕", "🚙", "🚌", "🚎", "🏎", "🚓", "🚑", "🚒", "🚐", "🛻", "🚚", "🚛", "🚜", "🛵", "🛺", "🚔", "🚍", "🚘", "🚖", "✈️", "🚝", "🚢", "🚁"], color: .yellow, numberOfPairsOfCards: 10)
-        insertTheme(titled: "NSFW", emojis: ["🍒", "🍑", "🥞", "🐱", "🍆", "🥜", "🧠", "👅"], color: .red)
         insertTheme(titled: "Sports", emojis: ["⚽️", "🏀", "🏈", "⚾️", "🥎", "🎾", "🏐", "🏉", "🎱", "🥏", "🪀", "🏓", "🥊", "🥅", "🥌", "⛸", "🥋"], color: .purple)
         insertTheme(titled: "Animals", emojis: ["🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼", "🐻‍❄️", "🐨", "🐯", "🦁", "🐮", "🐷", "🐸", "🐵"], color: .green)
     }
     
     init(named name: String) {
         self.name = name
-        restoreFromUserDefaults()
+//        restoreFromUserDefaults()
         if themes.isEmpty {
             templateThemes()
         }
