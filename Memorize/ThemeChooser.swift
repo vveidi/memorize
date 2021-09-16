@@ -10,14 +10,22 @@ import SwiftUI
 struct ThemeChooser: View {
     @ObservedObject var store: ThemeStore
     @State private var editMode: EditMode = .inactive
-    @State private var chosenTheme: Theme?
+    @State private var games: [Int: EmojiMemoryGame] = [:]
+    @State private var editingTheme: Theme?
+    @State private var activeGame: EmojiMemoryGame?
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(store.themes) { theme in
-                    NavigationLink(destination: EmojiMemoryGameView(theme: theme)) {
-                        ThemeListItem(theme: theme, editMode: $editMode, chosenTheme: $chosenTheme)
+                    if let game = games[theme.id] {
+                        NavigationLink(destination: EmojiMemoryGameView(game: chooseActiveGame(for: theme) ?? game, activeGame: $activeGame)) {
+                            ThemeListItem(theme: theme, editMode: $editMode)
+                                .gesture(editMode == .active ? tap(theme) : nil)
+                                .onChange(of: theme) { theme in
+                                    games[theme.id] = EmojiMemoryGame(theme: theme)
+                                }
+                        }
                     }
                 }
                 .onDelete { indexSet in
@@ -28,7 +36,7 @@ struct ThemeChooser: View {
                 }
             }
             .navigationTitle("Memorize")
-            .popover(item: $chosenTheme) { theme in
+            .popover(item: $editingTheme) { theme in
                 ThemeEditor(theme: $store.themes[theme])
             }
             .toolbar {
@@ -40,22 +48,42 @@ struct ThemeChooser: View {
                 }
             }
             .environment(\.editMode, $editMode)
+            .onAppear {
+                if games.isEmpty {
+                    store.themes.forEach { theme in
+                        games[theme.id] = EmojiMemoryGame(theme: theme)
+                    }
+                }
+            }
         }
+    }
+    
+    func tap(_ theme: Theme) -> some Gesture {
+        TapGesture()
+            .onEnded {
+                editingTheme = theme
+            }
     }
     
     var addNewThemeButton: some View {
         Button(action: {
-            chosenTheme = store.insertTheme(titled: "New Theme")
+            editingTheme = store.insertTheme(titled: "New Theme")
         }) {
             Image(systemName: "plus")
         }
+    }
+    
+    func chooseActiveGame(for theme: Theme) -> EmojiMemoryGame? {
+        if let game = activeGame, game.theme == theme {
+            return game
+        }
+        return nil
     }
 }
 
 struct ThemeListItem: View {
     var theme: Theme
     @Binding var editMode: EditMode
-    @Binding var chosenTheme: Theme?
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -70,14 +98,6 @@ struct ThemeListItem: View {
                     .lineLimit(1)
             }
         }
-        .gesture(editMode == .active ? tap(theme) : nil)
-    }
-    
-    func tap(_ theme: Theme) -> some Gesture {
-        TapGesture()
-            .onEnded {
-                chosenTheme = theme
-            }
     }
 }
 

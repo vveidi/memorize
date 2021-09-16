@@ -12,10 +12,7 @@ struct EmojiMemoryGameView: View {
     typealias Card = EmojiMemoryGame.Card
     @Namespace private var dealingNamespace
     @ObservedObject var game: EmojiMemoryGame
-    
-    init(theme: Theme) {
-        game = EmojiMemoryGame(theme: theme)
-    }
+    @Binding var activeGame: EmojiMemoryGame?
     
     var body: some View {
             ZStack(alignment: .bottom) {
@@ -43,6 +40,9 @@ struct EmojiMemoryGameView: View {
             }
             .navigationTitle("\(game.theme.title)")
             .padding()
+            .onAppear {
+                activeGame = game
+            }
     }
     
     @State private var dealt = Set<Int>()
@@ -167,12 +167,13 @@ struct EmojiMemoryGameView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let theme = ThemeStore(named: "Preview").theme(at: 0)
-        EmojiMemoryGameView(theme: theme)
-        EmojiMemoryGameView(theme: theme)
+        let game = EmojiMemoryGame(theme: theme)
+        EmojiMemoryGameView(game: game, activeGame: .constant(game))
+        EmojiMemoryGameView(game: game, activeGame: .constant(game))
             .previewLayout(.fixed(width: 568, height: 320))
-        EmojiMemoryGameView(theme: theme)
+        EmojiMemoryGameView(game: game, activeGame: .constant(game))
             .preferredColorScheme(.dark)
-        EmojiMemoryGameView(theme: theme)
+        EmojiMemoryGameView(game: game, activeGame: .constant(game))
             .preferredColorScheme(.dark)
             .previewLayout(.fixed(width: 568, height: 320))
     }

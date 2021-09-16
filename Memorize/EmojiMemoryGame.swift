@@ -11,7 +11,7 @@ class EmojiMemoryGame: ObservableObject {
     typealias Card = MemoryGame<String>.Card
     
     @Published private var model: MemoryGame<String>
-    @Published var theme: Theme
+    var theme: Theme
     
     private static func createMemoryGame(theme: Theme) -> MemoryGame<String> {
         MemoryGame<String>(numberOfPairsOfCards: theme.numberOfPairsOfCards) { pairIndex in
@@ -21,7 +21,7 @@ class EmojiMemoryGame: ObservableObject {
     
     init(theme: Theme) {
         self.theme = theme
-        model = EmojiMemoryGame.createMemoryGame(theme: theme)
+        self.model = EmojiMemoryGame.createMemoryGame(theme: theme)
     }
     
     // MARK: - Access to the Model
