@@ -105,7 +105,7 @@ struct ThemeEditor: View {
     }
     
     private struct ThemeConstants {
-        static let minimumNumberOfEmojiPairs = 2
+        static let minimumNumberOfEmojiPairs = 0
         static let emojiFontSize: CGFloat = 40
     }
 }
