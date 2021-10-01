@@ -2,7 +2,7 @@
 ##### iOS memory card game based on Stanford's CS193p course on SwiftUI (Spring 2021)
 
 <div align="center">
-    <img style="width: 70%;" src="https://github.com/veerlorden/memorize/blob/main/Screenshots/memorize-animation-new.mov" alt="memorize-animation">
+    <img style="width: 70%;" src="https://github.com/veerlorden/memorize/blob/main/Screenshots/memorize-animation-new.gif" alt="memorize-animation">
 </div>
 
 ## About the game
