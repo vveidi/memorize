@@ -1,8 +1,6 @@
 # Memorize 🎮
 #### iOS memory card game based on Stanford's CS193p course on SwiftUI (Spring 2021)
 
-some gif
-
 ## About the game
 Your task is to turn over all the cards one by one and find the same ones. There are only two identical cards in each deck.
 When you find a match, you get a point for each identical card. You get +1 extra point if you do it before card animation ends.
@@ -15,8 +13,16 @@ The app has some default themes, but you are free to add new themes and edit cur
 - Animation
 
 ## Screenshots
-
-some screenshots
+<div align="center">
+    <img style="width: 25%;" src="https://github.com/veerlorden/memorize/blob/main/Screenshots/game-main-screen.png" alt="game-main-screen">
+    <img style="width: 25%;" src="https://github.com/veerlorden/memorize/blob/main/Screenshots/game-main-screen2.png" alt="game-main-screen2">
+    <img style="width: 25%;" src="https://github.com/veerlorden/memorize/blob/main/Screenshots/game-alert.png" alt="game-alert">
+</div>
+<div align="center">
+    <img style="width: 25%;" src="https://github.com/veerlorden/memorize/blob/main/Screenshots/themes-editor-screen.png" alt="themes-editor-screen">
+    <img style="width: 25%;" src="https://github.com/veerlorden/memorize/blob/main/Screenshots/themes-main-screen-editable.png" alt="themes-main-screen-editable">
+    <img style="width: 25%;" src="https://github.com/veerlorden/memorize/blob/main/Screenshots/themes-main-screen.png" alt="themes-main-screen">
+</div>
 
 ## Sample code
 ```swift
