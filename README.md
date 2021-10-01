@@ -5,7 +5,7 @@
     <img style="width: 70%;" src="https://github.com/veerlorden/memorize/blob/main/Screenshots/memorize-animation-new-2.gif" alt="memorize-animation">
 </div>
 
-## About the game
+## About the Game
 Your task is to turn over all the cards one by one and find the same ones. There are only two identical cards in each deck.
 When you find a match, you get a point for each identical card. You get +1 extra point if you do it before card animation ends.
 The app has some default themes, but you are free to add new themes and edit current ones: add or remove emojis, change theme color or number of cards in the deck. 
@@ -28,7 +28,7 @@ The app has some default themes, but you are free to add new themes and edit cur
     <img style="width: 25%;" src="https://github.com/veerlorden/memorize/blob/main/Screenshots/themes-main-screen.png" alt="themes-main-screen">
 </div>
 
-## Sample code
+## Sample Code
 ```swift
 class ThemeStore: ObservableObject {
     let name: String
