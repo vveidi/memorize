@@ -19,10 +19,10 @@
 		DD9232A027077271003CE1FE /* themes-main-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92329927077271003CE1FE /* themes-main-screen.png */; };
 		DD9232A127077271003CE1FE /* themes-editor-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92329A27077271003CE1FE /* themes-editor-screen.png */; };
 		DD9232A227077271003CE1FE /* game-main-screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92329B27077271003CE1FE /* game-main-screen2.png */; };
-		DD9232A327077271003CE1FE /* memorize-animation.mov in Resources */ = {isa = PBXBuildFile; fileRef = DD92329C27077271003CE1FE /* memorize-animation.mov */; };
 		DD9232A427077271003CE1FE /* themes-main-screen-editable.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92329D27077271003CE1FE /* themes-main-screen-editable.png */; };
 		DD9232A527077271003CE1FE /* game-main-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92329E27077271003CE1FE /* game-main-screen.png */; };
 		DD9232A627077271003CE1FE /* game-alert.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92329F27077271003CE1FE /* game-alert.png */; };
+		DD9232A82707C7B6003CE1FE /* memorize-animation.mov in Resources */ = {isa = PBXBuildFile; fileRef = DD9232A72707C7B6003CE1FE /* memorize-animation.mov */; };
 		DDEB387C265912CA00D3710C /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB387B265912CA00D3710C /* MemorizeApp.swift */; };
 		DDEB387E265912CA00D3710C /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB387D265912CA00D3710C /* EmojiMemoryGameView.swift */; };
 		DDEB3880265912CB00D3710C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDEB387F265912CB00D3710C /* Assets.xcassets */; };
@@ -44,10 +44,10 @@
 		DD92329927077271003CE1FE /* themes-main-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "themes-main-screen.png"; sourceTree = "<group>"; };
 		DD92329A27077271003CE1FE /* themes-editor-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "themes-editor-screen.png"; sourceTree = "<group>"; };
 		DD92329B27077271003CE1FE /* game-main-screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-main-screen2.png"; sourceTree = "<group>"; };
-		DD92329C27077271003CE1FE /* memorize-animation.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "memorize-animation.mov"; sourceTree = "<group>"; };
 		DD92329D27077271003CE1FE /* themes-main-screen-editable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "themes-main-screen-editable.png"; sourceTree = "<group>"; };
 		DD92329E27077271003CE1FE /* game-main-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-main-screen.png"; sourceTree = "<group>"; };
 		DD92329F27077271003CE1FE /* game-alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-alert.png"; sourceTree = "<group>"; };
+		DD9232A72707C7B6003CE1FE /* memorize-animation.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "memorize-animation.mov"; path = "../../../../../../Desktop/memorize-animation.mov"; sourceTree = "<group>"; };
 		DDEB3878265912CA00D3710C /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEB387B265912CA00D3710C /* MemorizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeApp.swift; sourceTree = "<group>"; };
 		DDEB387D265912CA00D3710C /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 				DD92329F27077271003CE1FE /* game-alert.png */,
 				DD92329E27077271003CE1FE /* game-main-screen.png */,
 				DD92329B27077271003CE1FE /* game-main-screen2.png */,
-				DD92329C27077271003CE1FE /* memorize-animation.mov */,
+				DD9232A72707C7B6003CE1FE /* memorize-animation.mov */,
 				DD92329A27077271003CE1FE /* themes-editor-screen.png */,
 				DD92329D27077271003CE1FE /* themes-main-screen-editable.png */,
 				DD92329927077271003CE1FE /* themes-main-screen.png */,
@@ -191,12 +191,12 @@
 				DD9232A527077271003CE1FE /* game-main-screen.png in Resources */,
 				DDEB3883265912CB00D3710C /* Preview Assets.xcassets in Resources */,
 				DDEB3880265912CB00D3710C /* Assets.xcassets in Resources */,
+				DD9232A82707C7B6003CE1FE /* memorize-animation.mov in Resources */,
 				DD9232A127077271003CE1FE /* themes-editor-screen.png in Resources */,
 				DD9232A027077271003CE1FE /* themes-main-screen.png in Resources */,
 				DD9232A427077271003CE1FE /* themes-main-screen-editable.png in Resources */,
 				DD9232A227077271003CE1FE /* game-main-screen2.png in Resources */,
 				DD9232A627077271003CE1FE /* game-alert.png in Resources */,
-				DD9232A327077271003CE1FE /* memorize-animation.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
