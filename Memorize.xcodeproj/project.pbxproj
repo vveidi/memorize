@@ -16,11 +16,13 @@
 		DD4C190D26E974A80056F8D8 /* ThemeChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C190C26E974A80056F8D8 /* ThemeChooser.swift */; };
 		DD635B5E26B2BD100066356C /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD635B5D26B2BD100066356C /* Cardify.swift */; };
 		DD73FF3226B40EE3004362CB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73FF3126B40EE3004362CB /* CardView.swift */; };
-		DD9232862705F771003CE1FE /* themes-main-screen-editable.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9232812705F771003CE1FE /* themes-main-screen-editable.png */; };
-		DD9232872705F771003CE1FE /* themes-main-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9232822705F771003CE1FE /* themes-main-screen.png */; };
-		DD9232882705F771003CE1FE /* themes-editor-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9232832705F771003CE1FE /* themes-editor-screen.png */; };
-		DD9232892705F771003CE1FE /* game-main-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9232842705F771003CE1FE /* game-main-screen.png */; };
-		DD92328A2705F771003CE1FE /* memorize-animation.mov in Resources */ = {isa = PBXBuildFile; fileRef = DD9232852705F771003CE1FE /* memorize-animation.mov */; };
+		DD92329227072A8C003CE1FE /* game-main-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92328B27072A8B003CE1FE /* game-main-screen.png */; };
+		DD92329327072A8C003CE1FE /* memorize-animation.mov in Resources */ = {isa = PBXBuildFile; fileRef = DD92328C27072A8C003CE1FE /* memorize-animation.mov */; };
+		DD92329427072A8C003CE1FE /* game-main-screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92328D27072A8C003CE1FE /* game-main-screen2.png */; };
+		DD92329527072A8C003CE1FE /* themes-main-screen-editable.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92328E27072A8C003CE1FE /* themes-main-screen-editable.png */; };
+		DD92329627072A8C003CE1FE /* themes-main-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92328F27072A8C003CE1FE /* themes-main-screen.png */; };
+		DD92329727072A8C003CE1FE /* game-alert.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92329027072A8C003CE1FE /* game-alert.png */; };
+		DD92329827072A8C003CE1FE /* themes-editor-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DD92329127072A8C003CE1FE /* themes-editor-screen.png */; };
 		DDEB387C265912CA00D3710C /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB387B265912CA00D3710C /* MemorizeApp.swift */; };
 		DDEB387E265912CA00D3710C /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB387D265912CA00D3710C /* EmojiMemoryGameView.swift */; };
 		DDEB3880265912CB00D3710C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDEB387F265912CB00D3710C /* Assets.xcassets */; };
@@ -39,11 +41,13 @@
 		DD4C190C26E974A80056F8D8 /* ThemeChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChooser.swift; sourceTree = "<group>"; };
 		DD635B5D26B2BD100066356C /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		DD73FF3126B40EE3004362CB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		DD9232812705F771003CE1FE /* themes-main-screen-editable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "themes-main-screen-editable.png"; sourceTree = "<group>"; };
-		DD9232822705F771003CE1FE /* themes-main-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "themes-main-screen.png"; sourceTree = "<group>"; };
-		DD9232832705F771003CE1FE /* themes-editor-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "themes-editor-screen.png"; sourceTree = "<group>"; };
-		DD9232842705F771003CE1FE /* game-main-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-main-screen.png"; sourceTree = "<group>"; };
-		DD9232852705F771003CE1FE /* memorize-animation.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "memorize-animation.mov"; sourceTree = "<group>"; };
+		DD92328B27072A8B003CE1FE /* game-main-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "game-main-screen.png"; path = "../../../../../../Desktop/game-main-screen.png"; sourceTree = "<group>"; };
+		DD92328C27072A8C003CE1FE /* memorize-animation.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "memorize-animation.mov"; path = "../../../../../../Desktop/memorize-animation.mov"; sourceTree = "<group>"; };
+		DD92328D27072A8C003CE1FE /* game-main-screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-main-screen2.png"; sourceTree = "<group>"; };
+		DD92328E27072A8C003CE1FE /* themes-main-screen-editable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "themes-main-screen-editable.png"; path = "../../../../../../Desktop/themes-main-screen-editable.png"; sourceTree = "<group>"; };
+		DD92328F27072A8C003CE1FE /* themes-main-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "themes-main-screen.png"; path = "../../../../../../Desktop/themes-main-screen.png"; sourceTree = "<group>"; };
+		DD92329027072A8C003CE1FE /* game-alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-alert.png"; sourceTree = "<group>"; };
+		DD92329127072A8C003CE1FE /* themes-editor-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "themes-editor-screen.png"; path = "../../../../../../Desktop/themes-editor-screen.png"; sourceTree = "<group>"; };
 		DDEB3878265912CA00D3710C /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEB387B265912CA00D3710C /* MemorizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeApp.swift; sourceTree = "<group>"; };
 		DDEB387D265912CA00D3710C /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
@@ -68,11 +72,13 @@
 		DD9232802705F6B7003CE1FE /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				DD9232842705F771003CE1FE /* game-main-screen.png */,
-				DD9232852705F771003CE1FE /* memorize-animation.mov */,
-				DD9232832705F771003CE1FE /* themes-editor-screen.png */,
-				DD9232812705F771003CE1FE /* themes-main-screen-editable.png */,
-				DD9232822705F771003CE1FE /* themes-main-screen.png */,
+				DD92329027072A8C003CE1FE /* game-alert.png */,
+				DD92328B27072A8B003CE1FE /* game-main-screen.png */,
+				DD92328D27072A8C003CE1FE /* game-main-screen2.png */,
+				DD92328C27072A8C003CE1FE /* memorize-animation.mov */,
+				DD92329127072A8C003CE1FE /* themes-editor-screen.png */,
+				DD92328E27072A8C003CE1FE /* themes-main-screen-editable.png */,
+				DD92328F27072A8C003CE1FE /* themes-main-screen.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -182,13 +188,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD9232862705F771003CE1FE /* themes-main-screen-editable.png in Resources */,
+				DD92329827072A8C003CE1FE /* themes-editor-screen.png in Resources */,
+				DD92329227072A8C003CE1FE /* game-main-screen.png in Resources */,
+				DD92329627072A8C003CE1FE /* themes-main-screen.png in Resources */,
+				DD92329727072A8C003CE1FE /* game-alert.png in Resources */,
+				DD92329327072A8C003CE1FE /* memorize-animation.mov in Resources */,
 				DDEB3883265912CB00D3710C /* Preview Assets.xcassets in Resources */,
-				DD9232892705F771003CE1FE /* game-main-screen.png in Resources */,
-				DD9232872705F771003CE1FE /* themes-main-screen.png in Resources */,
 				DDEB3880265912CB00D3710C /* Assets.xcassets in Resources */,
-				DD9232882705F771003CE1FE /* themes-editor-screen.png in Resources */,
-				DD92328A2705F771003CE1FE /* memorize-animation.mov in Resources */,
+				DD92329427072A8C003CE1FE /* game-main-screen2.png in Resources */,
+				DD92329527072A8C003CE1FE /* themes-main-screen-editable.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
