@@ -14,6 +14,7 @@ The app has some default themes, but you are free to add new themes and edit cur
 - Swift
 - SwiftUI
 - MVVM
+- UserDefaults
 - Animation
 
 ## Screenshots
